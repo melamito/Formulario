@@ -1,3 +1,0 @@
-git remote add .
-git commit -m "mensaje de commit"
-git push -u origin main
