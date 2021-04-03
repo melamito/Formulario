@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<!---estilos--->
+	<link rel="stylesheet" href="css/estilo.css">
+
+	<!---js--->
+	
+</head>
+<body>
+	<form method="post" action="#" id="formulario">
+		<ul>
+			<li>
+				<label for="nombre" class="label">Nombre </label>
+				<input id="nombre" type="text" placeholder="Juan Francisco" required="true">
+			</li>
+
+			<li>
+				<label for="apellido" class="label">Apellido</label>
+				<input id="apellido" type="text" placeholder="Perez pereira" required="true">
+			</li>
+
+			<li>
+				<label for="rut" class="label">RUT</label>
+				<input id="rut" type="text" placeholder="12345678" maxlength="8">
+
+				<label for="dv">-</label>
+				<input id="dv" type="text" placeholder="K" maxlength="1">
+			</li>
+			<li>
+				<label for="email" class="label">Correo electronico</label>
+				<input id="email" type="email" placeholder="nombre@example.com">
+			</li>
+			<li>
+				<label for="telefono" class="label">telefono</label>
+				<input id="telefono" type="number" placeholder="999888777" maxlength="9">
+			</li>
+			
+			<li>
+				<label for="comentarios" class="label">Comentarios</label>
+				
+				<textarea id="comentarios"></textarea>
+			</li>
+
+			
+
+			<li class="button">
+				<button type="submit">Enviar</button>
+			</li>
+			
+
+		</ul>
+	</form>
+
+	<button id="btn"> Darle click</button>
+
+	<script src="js/app.js" async defer></script>
+</body>
+</html>
