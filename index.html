@@ -4,13 +4,19 @@
 	<title>Formulario</title>
 	<!---estilos--->
 	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
 	<!---js--->
 	
 </head>
 <body>
 	<form method="post" action="#" id="formulario">
+		<center><h1>Formulario</h1></center>
+		
 		<ul>
+
+			<!---------- Nombres ---------->
 			<li>
 				<div>
 					<label for="nombre" class="label">Nombre </label>
@@ -20,6 +26,7 @@
 				</div>
 			</li>
 
+			<!---------- Apellidos ---------->
 			<li>
 				<div>
 					<label for="apellido" class="label">Apellido</label>
@@ -29,6 +36,7 @@
 				</div>
 			</li>
 
+			<!------------- rut ------------->
 			<li>
 				<div>
 					<label for="rut" class="label">RUT</label>
@@ -39,6 +47,8 @@
 					</div>
 				</div>
 			</li>
+
+			<!----------- Correo ----------->
 			<li>
 				<div>
 					<label for="email" class="label">Correo electronico</label>
@@ -47,6 +57,8 @@
 					</div>
 				</div>
 			</li>
+
+			<!---------- Telefono ---------->
 			<li>
 				<div>
 					<label for="telefono" class="label">Telefono</label>
@@ -55,16 +67,8 @@
 					</div>
 				</div>
 			</li>
-			
-			<li>
-				<div>
-					<label for="comentarios" class="label">Comentarios</label>
-					<div>
-						<textarea id="comentarios"></textarea>
-					</div>
-				</div>
-			</li>
 
+			<!---------- Lenguajes ---------->
 			<li>
 				<div id="box">
 					<label class="label2">Seleccione uno o mas lenguajes de su interés</label>
@@ -92,10 +96,53 @@
 				</div>
 			</li>
 
+			<!------------ Range ------------>
+			<li> 
+				<label class="label">¿Cuál es su conocimiento de programación?</label>
+				<div class="range">
+					<div class="field">
+						<div class="value left">0</div>
+						<input type="range" min="0" max="100" value="50" steps="1">
+						<div class="value right">100</div>
+					</div>
+				</div>
+			</li>
+
+			<!---------- Experiencia ---------->
+			<li>
+				<label class="label">Experiencia Laboral</label>
+				<div class="radio">
+					<input type="radio" name="exp" id="1">
+					<label for="1">1 año</label>
+
+					<input type="radio" name="exp" id="2">
+					<label for="2">2 años</label>
+
+					<input type="radio" name="exp" id="3">
+					<label for="3">3 años</label>
+
+					<input type="radio" name="exp" id="4">
+					<label for="4">4 años</label>
+
+					<input type="radio" name="exp" id="5">
+					<label for="5">5 o mas</label>
+				</div>
+
+			</li>
+			
+			<!---------- Descripcion personal ---------->
+			<li>
+				<div>
+					<label for="descripcion" class="label">Descripcion breve de usted</label>
+					<div>
+						<textarea id="descripcion" type="text" placeholder="Descripcion..." maxlength="300"></textarea>
+					</div>
+				</div>
+			</li>
+
 			<li class="button">
 				<button type="submit">Enviar</button>
 			</li>
-			
 
 		</ul>
 	</form>

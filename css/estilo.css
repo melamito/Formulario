@@ -1,22 +1,28 @@
 body{
-	background-color: rgb(117, 0, 0);
+	--colorFondo : rgb(117, 0, 0);
+	--colorFormu : rgba(0,0,0,0.5);
+	--ancho : 56%;
+	--margen: 22%;
+	--borde : 10px;
+
+	font-family: 'Architects Daughter';
+	background-color: var(--colorFondo);
 	color:white;
 }
 #formulario{
-	display: grid;
+
 	grid-template-columns: 1fr;
-	margin:10px;
-	width: 50%;
-	padding:1em; 
+
+	width: var(--ancho);
 	border:1px solid #ccc;
-	margin-left: 25%;
-	background-color: rgb(109, 51, 51);
+	margin-left: var(--margen);
+	background-color: var(--colorFormu);
 }
 
 form ul{
 	list-style-type: none;
 	padding: 0;    /*para adentro*/
-	margin-left: 0%;   
+	margin: 0%;   
 }
 
 label{
@@ -25,26 +31,27 @@ label{
 
 .label{
 	display: inline-block;
-	width: 50%;
+	width: var(--ancho);
 	text-align: left;
 	cursor: pointer;
-	margin: 5px;
-	margin-left: 25%;
+	margin: 10px;
+	margin-left: var(--margen);
 }
 
 input{
 	border: 1px solid #999;
-	border-radius: 10px;
+	border-radius: var(--borde);
 	height: 20px;
 }
 
 .input1{
-	width: 50%;
-	margin-left: 25%;}
+	width: var(--ancho);
+	margin-left: var(--margen);
+}
 
 .input2{  /*---RUT---*/
 	width: 25%;
-	margin-left: 25%;  
+	margin-left: var(--margen);  
 }
 
 .input3{   /*--- dig verif ---*/
@@ -53,10 +60,10 @@ input{
 }
 
 textarea{
-	width: 50%;
+	width: var(--ancho);
 	height: 5em;
-	margin-left: 25%;
-	border-radius: 10px;
+	margin-left: var(--margen);
+	border-radius: var(--borde);
 }
 .button{
 	padding-left: 27%;
@@ -76,14 +83,76 @@ button{
 	grid-template-columns: 30px auto;
 }
 
-#box{
+#box{  /*--- Chechklist ---*/
 	align-items: center;
-	width: 50%;
+	width: var(--ancho);
 	height: 100%;
 	margin-top: 10px;
-	margin-left: 25%;
+	margin-left: var(--margen);
 	/*border: 1px solid red;*/
-	border-radius: 10px;
+	border-radius: var(--borde);
 	padding:5px;
 }
 
+.range{  /*--- Cuadrito range ---*/
+	color: var(--colorFondo);
+	margin-left: var(--margen);
+	height: 100%;
+	width: var(--ancho);
+	background-color: white;
+	border-radius: var(--borde);
+	padding-top: 5px;
+	
+	overflow:hidden;
+}
+
+
+.range .field{ 
+	position:relative;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.range .field input{
+	-webkit-appearance: none;
+	height: 3px;
+	width:100%;
+	background:#ddd;
+	border-radius: 5px;
+	outline:none;
+	border:none;
+}
+
+.range .field input::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	height: 15px;
+	width: 15px;
+	background: var(--colorFondo);
+	border-radius: 50%;
+	border: 1px solid white;
+	cursor:pointer;
+}
+
+.range .field .value{
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--colorFondo);
+}
+
+div.radio{
+	align-items: center;
+	width: var(--ancho);
+	margin-left: var(--margen);
+	margin-bottom: 10px;
+}
+
+div.radio input{
+	margin-right: 0px;
+	margin-left: 5px;
+}
