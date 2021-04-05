@@ -41,7 +41,7 @@
 				<div>
 					<label for="rut" class="label">RUT</label>
 					<div>
-						<input id="rut" class="input2" type="text" placeholder="12345678" maxlength="8">
+						<input id="rut" class="input2" type="text" pattern=[0-9]{8} placeholder="12345678" maxlength="8">
 						<label for="dv">-</label>
 						<input id="dv" class="input3" type="text" placeholder="K" maxlength="1">
 					</div>
@@ -140,14 +140,18 @@
 				</div>
 			</li>
 
-			<li class="button">
-				<button type="submit">Enviar</button>
+			<!---------- Botones ---------->
+			<li>
+				<div class="boton">
+					<center>
+					<button type="submit" class="boton1">Enviar</button>
+					</center>
+				</div>
 			</li>
-
 		</ul>
 	</form>
 
-	<button id="btn"> Darle click</button>
+	<button type="button" class="boton2">Reiniciar</button>
 
 	<script src="js/app.js" async defer></script>
 </body>

@@ -9,10 +9,13 @@ body{
 	background-color: var(--colorFondo);
 	color:white;
 }
+
+h1{
+	margin-top:10px;
+}
+
 #formulario{
-
 	grid-template-columns: 1fr;
-
 	width: var(--ancho);
 	border:1px solid #ccc;
 	margin-left: var(--margen);
@@ -64,15 +67,6 @@ textarea{
 	height: 5em;
 	margin-left: var(--margen);
 	border-radius: var(--borde);
-}
-.button{
-	padding-left: 27%;
-}
-button{
-	background-color: blue;
-	color: white;
-	border: 0;
-	padding: 5px;
 }
 
 #checklist{
@@ -155,4 +149,26 @@ div.radio{
 div.radio input{
 	margin-right: 0px;
 	margin-left: 5px;
+}
+
+.boton{
+	width: 100%;
+	height:100% ;
+	overflow: hidden;
+	padding-top:15px;
+	padding-bottom: 15px;
+}
+
+
+
+button{
+	background-color: black;
+	color: white;
+	border: 0;
+	padding: 5px;
+	cursor:pointer;
+}
+
+button:hover{
+	background-color: rgb(54, 54, 54);
 }
