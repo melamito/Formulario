@@ -4,21 +4,16 @@ var restricciones = {
     dv: /^[\dk]{1}$/,
     telefono: /^\d{9}$/
 };
-var formulario = document.querySelectorAll("#formulario inputs");
-//let nombre:any = formulario.elements[1];
-var elementos = formulario.elements;
-formulario.forEach(function (element) {
-    element.addEventListener("keyup", function (event) {
-        console.log("teclita");
-    });
+var formulario = document.getElementById("formulario");
+var mensaje = document.getElementById("mensaje");
+formulario.addEventListener("submit", function (event) {
+    mensaje.style.display = "block";
+    formulario.style.display = "none";
+    event.preventDefault();
 });
-/*formulario.array.forEach(function(elemento) {
-    elemento.addEventListener('keyup', function() {
-        console.log("tecla ");
-    });
-});
-
-formulario.addEventListener("submit",function(event){
-    
-    event.preventdefault();
-});*/ 
+function resetear() {
+    console.log("holito");
+    mensaje.style.display = "none";
+    formulario.style.display = "block";
+    formulario.reset();
+}
